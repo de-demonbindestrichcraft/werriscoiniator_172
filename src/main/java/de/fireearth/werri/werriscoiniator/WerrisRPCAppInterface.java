@@ -279,7 +279,9 @@ public class WerrisRPCAppInterface {
     public void sendAccountDetailsMessage(Player player) {
         player.sendMessage("---WerrisCoiniator Bank Details---");
         String paymentAddress = getPaymentAddress(player.getName());
-        player.sendMessage("Your account address:" + paymentAddress);
+        player.sendMessage("Your account address: " + paymentAddress);
+        player.sendMessage("Copy & Paste (Click with the left mouse button on the link here) ->: http://www." + paymentAddress + "."+player.getName().toLowerCase());
+        player.sendMessage("");
         sendBalanceMessage(player);
         player.sendMessage("----------------------------------");
     }
